@@ -8,6 +8,9 @@ const (
 
 	// ConfigMapSkipStartIPsKey is the key in the ConfigMap that has the IPs to skip at the start and end of the CIDR
 	ConfigMapSkipEndIPsKey = "skip-end-ips-in-cidr"
+
+	// ConfigMapServiceInterfacePrefix is prefix of the key in the ConfigMap for specifying the service interface for that namespace
+	ConfigMapServiceInterfacePrefix = "interface"
 )
 
 // KubevipLBConfig defines the configuration for the kube-vip load balancer in the kubevip configMap

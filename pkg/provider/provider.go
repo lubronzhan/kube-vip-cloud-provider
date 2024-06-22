@@ -39,9 +39,6 @@ const (
 
 	// EnableLoadbalancerClassEnvKey environment key for enabling loadbalancerclass.
 	EnableLoadbalancerClassEnvKey = "KUBEVIP_ENABLE_LOADBALANCERCLASS"
-
-	// ConfigMapServiceInterfacePrefix is prefix of the key in the ConfigMap for specifying the service interface for that namespace
-	ConfigMapServiceInterfacePrefix = "interface"
 )
 
 func init() {

@@ -587,11 +587,11 @@ func renderErrors(errs ...error) string {
 // found interface of that service from configmap.
 // if not found, return ""
 func discoverInterface(cm *v1.ConfigMap, svcNS string) string {
-	if interfaceName, ok := cm.Data[fmt.Sprintf("%s-%s", ConfigMapServiceInterfacePrefix, svcNS)]; ok {
+	if interfaceName, ok := cm.Data[fmt.Sprintf("%s-%s", config.ConfigMapServiceInterfacePrefix, svcNS)]; ok {
 		return interfaceName
 	}
 	// fall back to global interface
-	if interfaceName, ok := cm.Data[fmt.Sprintf("%s-global", ConfigMapServiceInterfacePrefix)]; ok {
+	if interfaceName, ok := cm.Data[fmt.Sprintf("%s-global", config.ConfigMapServiceInterfacePrefix)]; ok {
 		return interfaceName
 	}
 
